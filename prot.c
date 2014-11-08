@@ -10,7 +10,6 @@
 #include <sys/types.h>
 #include <sys/utsname.h>
 #include <sys/socket.h>
-#include <netinet/in.h>
 #include <inttypes.h>
 #include <stdarg.h>
 #include "dat.h"
@@ -1911,7 +1910,7 @@ h_accept(const int fd, const short which, Server *s)
     Conn *c;
     int cfd, flags, r;
     socklen_t addrlen;
-    struct sockaddr_in6 addr;
+    struct sockaddr_storage addr;
 
     addrlen = sizeof addr;
     cfd = accept(fd, (struct sockaddr *)&addr, &addrlen);
