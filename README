@@ -1,4 +1,5 @@
 This is beanstalkd, a fast, general-purpose work queue.
+This project patch to support listen on unix socket file, make service more private, more secure.
 See http://kr.github.io/beanstalkd/ for general info.
 
 
